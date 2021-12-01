@@ -1,6 +1,7 @@
 @import "_var";
 @import "_reset";
 @import "_fonts/fonts";
+@import "_menu-btn";
 
 @mixin decoration-line1 {
    position: relative;
@@ -58,14 +59,6 @@
    
 
 
-
-
-
-
-@media (min-width:320px) { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
-
-
-
    .container{
       max-width: 1200px;
       margin: 0 auto;
@@ -82,8 +75,13 @@
    }
 
 
+
+@media (min-width:320px) { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+
+
    .header{
-      position: sticky;
+      position: fixed;
+      width: 100%;
       top: 0;
       z-index: 999;
 
@@ -137,13 +135,12 @@
          background: #fff;
 
          .nav-flex-wrap{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            // display: flex;
+            // align-items: center;
+            // justify-content: space-between;
          }
 
-         .company-logo{
-            padding: 28px 0;
+         .logo{
 
 
             .logo-link{
@@ -171,7 +168,7 @@
             .nav-link{
                color: $heading-color;
                font-size: 18px;
-               padding: 10px;
+           
 
                font-family: FreightSans;
                font-style: normal;
@@ -185,9 +182,7 @@
 
 
             
-               &:last-child{
-                  padding-right: 0;
-               }
+   
 
              
             }
@@ -201,8 +196,8 @@
 
    .main{
       min-height:100vh;
-      background-image: url("../img/main @2x.png");
-      background-size: cover;
+      background-image: url("../img/perustava_landing.jpg");
+      background-size: 100% 100%;
 
 
       .main-content{
@@ -282,7 +277,7 @@
       padding: 83px 0;
 
       .about-container{
-         width: 620px;
+         max-width: 620px;
       }
 
       .about-title{
