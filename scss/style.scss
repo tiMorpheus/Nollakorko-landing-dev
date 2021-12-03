@@ -58,9 +58,11 @@
    
    background: #EBEDF0;
    border: none;
+   transition: 0.2s;
 
    &:hover{
       cursor: pointer;
+      background: #d7d9db;
    }
 }
 
@@ -126,12 +128,14 @@
 
             text-align: center;
             text-transform: uppercase;
+            transition: 0.2s;
 
           
 
 
             &:hover{
                cursor: pointer;
+               text-decoration: underline;
             }
             
          }
@@ -205,14 +209,18 @@
 
    .main{
       min-height:100vh;
-      background-image: url("../img/perustava_landing.jpg");
+      // background-image: url("../img/perustava_landing.jpg");
       // background-size: 100% 100%;
 
+      .main-img{
+         width: 100%;
+      }
 
       .main-content{
 
-         position: relative;
-         top: 8em;
+         // position: relative;
+         // top: 8em;
+         margin: 150px 0 50px;
 
          .main-company-header{
             color: $heading-color;
@@ -260,17 +268,31 @@
                text-align: center;
                border-radius: 4px;
                margin-right: 25px;
+               box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12);
 
             }
 
             .btn-orange{
                background: $base-color;
                color: #fff;
+               transition: all 1s ease;
+
+               &:hover{
+                  background: #d24f13;
+               }
             }
 
             .btn-white{
                background: #fff;
                color: $base-color;
+
+               transition: all 1s ease;
+
+               &:hover{
+                  background: #f1eeed;
+                  color: #d24f13;
+               }
+
             }
 
          }
@@ -343,8 +365,16 @@
    
 
 
-            .benefit-img{
-               
+            .benefit-img-block{
+               background: #FFFFFF;
+               box-shadow: 0px 9px 20px 2px rgba(118, 118, 118, 0.1);               border-radius: 0px 20px 20px 20px;
+               width: 112px;
+               height: 112px;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+
+               margin-bottom: 35px;
             }
 
             .benefit-card-title{
@@ -457,9 +487,14 @@
             .pdf-submit-btn{
                display: flex;
                flex-direction: row;
-               justify-content: space-evenly;
+               justify-content: center;
                align-items: center;
+         
                padding: 14px 39px;
+
+               i{
+                  margin-right: 10px;
+               }
 
       
                width: 100%;
@@ -703,9 +738,10 @@
   
          .general-info-numbers{
             display: flex;
+            flex-direction: column;
             justify-content: space-between;
-            align-items: center;
-            text-align: center;
+            align-items: flex-start;
+            text-align: left;
 
             h4{
                font-family: FreightSans-Bold;
@@ -931,11 +967,21 @@
 
    .main{
       min-height:100vh;
-      background-image: url("../img/perustava_landing.jpg");
-      background-size: 100% 100%;
+      // background-image: url("../img/perustava_landing.jpg");
+      // background-size: 100% 100%;
 
+      
+      .main-img{
+         // position: absolute;
+         // z-index: -1;
+         // top: -40px;
+     
+      }
+
+  
 
       .main-content{
+         margin: 0;
 
          position: relative;
          top: 12em;
@@ -1151,6 +1197,10 @@
                align-items: center;
                padding: 14px 39px;
 
+               i{
+                  margin-right: 0;
+               }
+
       
                width: 172.35px;
                height: 53px;
@@ -1360,7 +1410,7 @@
          
 
          .general-info-numbers{
-            display: flex;
+            flex-direction: row;
             justify-content: space-between;
             align-items: center;
             text-align: center;
